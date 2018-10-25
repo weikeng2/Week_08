@@ -26,7 +26,7 @@ function reallyCoolAPI(query) {
 }
 
 //  Declare API Route
-app.get("/api/search/query", (req, res) => {
+app.get("/api/search/:query", (req, res) => {
   let query = req.params.query
   res.send(reallyCoolAPI(query))
 })
